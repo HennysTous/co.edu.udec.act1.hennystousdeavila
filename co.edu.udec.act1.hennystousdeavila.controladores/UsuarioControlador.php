@@ -44,7 +44,8 @@ class UsuarioControlador {
                 header('Location: listar.php?action=home');
             } else {
                 // Si el usuario no es válido, mostrar un mensaje de error
-                $error = 'Email o contraseña incorrectos';
+              $_SESSION['error'] = "Lo siento, tu email o tu contraseña son invalidos. Por favor, intentalo nuevamente.";
+                header("Location: login.php?action=login");
                 include 'login.php';
             }
         } else {

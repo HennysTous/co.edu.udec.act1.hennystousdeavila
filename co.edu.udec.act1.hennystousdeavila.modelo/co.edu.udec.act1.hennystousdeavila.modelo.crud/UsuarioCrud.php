@@ -1,6 +1,10 @@
 <?php
+try {
+    include_once '../../co.edu.udec.act1.hennystousdeavila.modelo/co.edu.udec.act1.hennystousdeavila.modelo.entidades/Usuario.php';
+} catch (Exception $ex) {
+    echo $ex->getMessage();
+}
 
-include '../co.edu.udec.act1.hennystousdeavila.modelo.entidades/Usuario.php';
 
 class UsuarioCrud {
 
@@ -12,14 +16,9 @@ class UsuarioCrud {
             $email,
             $pass) {
         try {
-            Usuario::create(array(
-                'cc' => $cc,
-                'nombre' => $nombre,
-                'apellido' => $apellido,
-                'genero' => $genero,
-                'email' => $email,
-                'pass' => $pass
-            ));
+            Usuario::query(
+                    "INSERT INTO `usuarios`(`cc`, `pass`, `nombre`, `apellido`, `genero`, `email`) "
+                    . "VALUES ('$cc','$pass','$nombre','$apellido','$genero','$email')");
         } catch (Exception $ex) {
             throw new Exception("Error al Ingresar el usuario, al parecer ya existe");
         }
@@ -48,7 +47,7 @@ class UsuarioCrud {
     }
 
     public static function modificarUsuario($usuario) {
-        return UsuarioCRUD::agregarUsuario($usuario);
+        return Usuario::update_all($usuario);
     }
 
     public static function listarUsuario() {
