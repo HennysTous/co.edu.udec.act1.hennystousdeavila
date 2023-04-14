@@ -1,0 +1,16 @@
+{
+    "name": "vendor/co-edu-udec-act1-hennystousdeavila",
+    "description": "Description of project co.edu.udec.act1.hennystousdeavila.",
+    "authors": [
+        {
+            "name": "Hennys",
+            "email": "your@email.here"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+     "psr-0": { "ActiveRecord\\": "../lib/" }
+ }
+    
+}
