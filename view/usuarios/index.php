@@ -21,6 +21,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     // Cargar los controladores
     require_once '../../co.edu.udec.act1.hennystousdeavila.controladores/UsuarioControlador.php';
     require_once '../../co.edu.udec.act1.hennystousdeavila.modelo/co.edu.udec.act1.hennystousdeavila.modelo.entidades/Usuario.php';
+    require_once '../../co.edu.udec.act1.hennystousdeavila.modelo/co.edu.udec.act1.hennystousdeavila.modelo.crud/UsuarioCrud.php';
     
     // Enrutamiento
     if (isset($_GET['action'])) {

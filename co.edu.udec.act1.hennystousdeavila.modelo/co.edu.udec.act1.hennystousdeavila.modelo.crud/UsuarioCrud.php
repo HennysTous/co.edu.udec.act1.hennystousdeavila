@@ -1,6 +1,6 @@
 <?php
 
-include_once '../co.edu.udec.act1.hennystousdeavila.modelo.entidades/Usuario.php';
+include '../co.edu.udec.act1.hennystousdeavila.modelo.entidades/Usuario.php';
 
 class UsuarioCrud {
 
@@ -61,7 +61,7 @@ class UsuarioCrud {
 
 }
 
-$usuarios = UsuarioCrud::listarUsuario();
+/*$usuarios = UsuarioCrud::listarUsuario();
 foreach ($usuarios as $usuario) {
     echo implode(" | ", array($usuario->cc, $usuario->nombre, $usuario->apellido ,$usuario->genero , $usuario->email)) . "<br>";
-}
+}*/
